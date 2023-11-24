@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class BookingTable(models.Model):
-    id = models.IntegerField(  )
+    id = models.IntegerField(primary_key=True, max_length=5)
     name = models.CharField(max_length=255)
     noofguests = models.IntegerField(max_length=6)
     bookingdate = models.DateTimeField()
