@@ -34,3 +34,5 @@ update single menu item (with trailing slash!)  <br>
 DELETE /restaurant/menu/<pk>/  <br>
 delete single booking item (with trailing slash!) <br>
 </p>	
+
+#### N.B. test classes for views and models are included in one file "tests.py" 
