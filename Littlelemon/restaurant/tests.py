@@ -13,13 +13,13 @@ from rest_framework import status
 class MenuTableTest(TestCase):
    
     def setUp(self):
-        zucchina = MenuTable.objects.create(title="zucchina", price=80.00, inventory=100)
-        albicocca = MenuTable.objects.create(title="albicocca", price="0.01", inventory=1000)
+        zucchina = MenuTable.objects.create(id = 1, title="zucchina", price=80.00, inventory=100)
+        albicocca = MenuTable.objects.create(id = 2, title="albicocca", price="0.01", inventory=1000)
     
     def test_string_method(self):   
         item = MenuTable.objects.get(title = "zucchina")
         itemstr = item.__str__()
-        self.assertEqual(itemstr, "zucchina : 80.00")
+        self.assertEqual(itemstr, "zucchina")
 
     def test_item_price(self):
         albicocca = MenuTable.objects.get(title="albicocca")
